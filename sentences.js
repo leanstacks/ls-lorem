@@ -47,9 +47,7 @@ const _sentences = (nbr = 1) => {
   let res = "";
   const sentences = _sentencesAsArray(nbr);
 
-  sentences.forEach(sentence => {
-    res += _SPACE + sentence;
-  });
+  res = sentences.reduce((acc, val) => acc += _SPACE + val);
 
   return res.trim();
 };
