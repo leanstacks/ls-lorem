@@ -54,6 +54,21 @@ const s2 = sentences(2);
 // "Ligula enim nibh cras vel. Arcu quam sed qui in labore nulla convallis."
 ```
 
+Create an array of sentences. The maximum number of sentences is 100.
+
+```
+// Load the 'sentencesAsArray' generator.
+const { sentencesAsArray } = require('ls-lorem');
+
+// Generate one sentence.
+const s1 = sentencesAsArray();
+// ["Neque in ad do deserunt nunc."]
+
+// Generate specified number of sentences.
+const s2 = sentencesAsArray(2);
+// ["Ligula enim nibh cras vel.","Arcu quam sed qui in labore nulla convallis."]
+```
+
 ### Paragraphs
 
 Create a single paragraph as a string or multiple paragraphs as an array. The maximum number of paragraphs in the array is 50.
