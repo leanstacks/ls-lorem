@@ -3,6 +3,8 @@ const { words } = require('./words');
 const _DEFAULT_WORDS_MIN = 5;
 const _DEFAULT_WORDS_MAX = 9;
 
+const _MAX_SENTENCES = 100;
+
 const _COMMA = ", ";
 const _PERIOD = ".";
 
@@ -31,9 +33,12 @@ const _createSentence = () => {
 
 const _sentences = (nbr = 1) => {
   let res = "";
-  for (let i = 0; i < nbr; i++) {
+  const totalSentences = (( 0 < nbr ) && ( nbr <= _MAX_SENTENCES )) ? nbr : 1;
+
+  for (let i = 0; i < totalSentences; i++) {
     res += " " + _createSentence();
   }
+  
   return res.trim();
 };
 
