@@ -1,4 +1,4 @@
-const words = require('./words');
+const { words } = require('./words');
 
 const _DEFAULT_WORDS_MIN = 5;
 const _DEFAULT_WORDS_MAX = 9;
@@ -29,10 +29,14 @@ const _createSentence = () => {
   return sentence;
 };
 
-module.exports = (nbr = 1) => {
+const _sentences = (nbr = 1) => {
   let res = "";
   for (let i = 0; i < nbr; i++) {
     res += " " + _createSentence();
   }
   return res.trim();
+};
+
+module.exports = {
+  sentences: _sentences
 };
