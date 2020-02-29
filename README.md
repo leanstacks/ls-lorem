@@ -37,6 +37,21 @@ const w2 = words(6);
 // "elit aliqua ipsum irure urna voluptate"
 ```
 
+Create an array of words. The maximum number of words is 1000.
+
+```
+// Load the 'wordsAsArray' generator.
+const { wordsAsArray } = require('ls-lorem');
+
+// Generate one word.
+const w1 = wordsAsArray();
+// ["lorem"]
+
+// Generate specified number of words.
+const w2 = wordsAsArray(6);
+// ["elit","aliqua","ipsum","irure","urna","voluptate"]
+```
+
 ### Sentences
 
 Create a string of sentences. The maximum number of sentences is 100.
@@ -52,6 +67,21 @@ const s1 = sentences();
 // Generate specified number of sentences.
 const s2 = sentences(2);
 // "Ligula enim nibh cras vel. Arcu quam sed qui in labore nulla convallis."
+```
+
+Create an array of sentences. The maximum number of sentences is 100.
+
+```
+// Load the 'sentencesAsArray' generator.
+const { sentencesAsArray } = require('ls-lorem');
+
+// Generate one sentence.
+const s1 = sentencesAsArray();
+// ["Neque in ad do deserunt nunc."]
+
+// Generate specified number of sentences.
+const s2 = sentencesAsArray(2);
+// ["Ligula enim nibh cras vel.","Arcu quam sed qui in labore nulla convallis."]
 ```
 
 ### Paragraphs

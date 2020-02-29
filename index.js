@@ -1,10 +1,12 @@
 const { paragraph, paragraphs } = require('./paragraphs');
-const { sentences } = require('./sentences');
-const { words } = require('./words');
+const { sentences, sentencesAsArray } = require('./sentences');
+const { words, wordsAsArray } = require('./words');
 
 module.exports = {
   paragraph,
   paragraphs,
   sentences,
-  words
+  sentencesAsArray,
+  words,
+  wordsAsArray
 };

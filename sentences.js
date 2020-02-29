@@ -5,6 +5,7 @@ const _DEFAULT_WORDS_MAX = 9;
 
 const _MAX_SENTENCES = 100;
 
+const _SPACE = " ";
 const _COMMA = ", ";
 const _PERIOD = ".";
 
@@ -20,7 +21,7 @@ const _capitalize = (sentence = '') => {
     return sentence;
   }
 
-  return sentence.slice(0,1).toUpperCase() + sentence.slice(1);
+  return sentence.slice(0, 1).toUpperCase() + sentence.slice(1);
 };
 
 const _createSentence = () => {
@@ -31,17 +32,27 @@ const _createSentence = () => {
   return sentence;
 };
 
-const _sentences = (nbr = 1) => {
-  let res = "";
-  const totalSentences = (( 0 < nbr ) && ( nbr <= _MAX_SENTENCES )) ? nbr : 1;
+const _sentencesAsArray = (nbr = 1) => {
+  let res = [];
+  const totalSentences = ((0 < nbr) && (nbr <= _MAX_SENTENCES)) ? nbr : 1;
 
   for (let i = 0; i < totalSentences; i++) {
-    res += " " + _createSentence();
+    res.push(_createSentence());
   }
-  
+
+  return res;
+};
+
+const _sentences = (nbr = 1) => {
+  let res = "";
+  const sentences = _sentencesAsArray(nbr);
+
+  res = sentences.reduce((acc, val) => acc += _SPACE + val);
+
   return res.trim();
 };
 
 module.exports = {
-  sentences: _sentences
+  sentences: _sentences,
+  sentencesAsArray: _sentencesAsArray
 };
