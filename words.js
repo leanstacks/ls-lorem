@@ -2,6 +2,8 @@ const _WORDS = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipis
 
 const _MAX_WORDS = 1000;
 
+const _SPACE = " ";
+
 const _dedup = () => {
   console.log(`dedup. word count:${_WORDS.length}`);
   _WORDS.forEach(word => {
@@ -12,18 +14,28 @@ const _dedup = () => {
   });
 };
 
-const _words = (nbr = 1) => {
-  let res = "";
+const _wordsAsArray = (nbr = 1) => {
+  let res = [];
   const totalWords = (( 0 < nbr ) && ( nbr <= _MAX_WORDS )) ? nbr : 1;
 
   for (let i = 0; i < totalWords; i++) {
     let idx = Math.floor((Math.random() * _WORDS.length));
-    res += " " + _WORDS[idx];
+    res.push(_WORDS[idx]);
   }
   
+  return res;
+};
+
+const _words = (nbr = 1) => {
+  let res = "";
+  const words = _wordsAsArray(nbr);
+
+  res = words.reduce((acc, val) => acc += _SPACE + val);
+
   return res.trim();
 };
 
 module.exports =  {
-  words: _words
+  words: _words,
+  wordsAsArray: _wordsAsArray
 };
