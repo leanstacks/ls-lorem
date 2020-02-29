@@ -29,12 +29,12 @@ Create a string of words. The maximum number of words is 1000.
 const { words } = require('ls-lorem');
 
 // Generate one word.
-const wrd = words();
-// lorem
+const w1 = words();
+// "lorem"
 
 // Generate specified number of words.
-const wrds = words(9);
-// elit aliqua ipsum irure urna voluptate
+const w2 = words(6);
+// "elit aliqua ipsum irure urna voluptate"
 ```
 
 ### Sentences
@@ -46,12 +46,12 @@ Create a string of sentences. The maximum number of sentences is 100.
 const { sentences } = require('ls-lorem');
 
 // Generate one sentence.
-const sent = sentences();
-// Neque in ad do deserunt nunc.
+const s1 = sentences();
+// "Neque in ad do deserunt nunc."
 
 // Generate specified number of sentences.
-const sents = sentences(2);
-// Ligula enim nibh cras vel. Arcu quam sed qui in labore nulla convallis.
+const s2 = sentences(2);
+// "Ligula enim nibh cras vel. Arcu quam sed qui in labore nulla convallis."
 ```
 
 ### Paragraphs
