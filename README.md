@@ -20,6 +20,7 @@ $ yarn add ls-lorem
 
 In Node.js:
 
+### Words
 ```
 // Load the 'words' generator.
 const { words } = require('ls-lorem');
@@ -31,4 +32,19 @@ const wrd = words();
 // Generate specified number of words.
 const wrds = words(9);
 // elit aliqua ipsum irure urna voluptate
+```
+
+### Sentences
+
+```
+// Load the 'sentences' generator.
+const { sentences } = require('ls-lorem');
+
+// Generate one sentence.
+const sent = sentences();
+// Neque in ad do deserunt nunc.
+
+// Generate specified number of sentences.
+const sents = sentences(2);
+// Ligula enim nibh cras vel. Arcu quam sed qui in labore nulla convallis.
 ```

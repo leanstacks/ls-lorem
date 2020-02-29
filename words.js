@@ -14,8 +14,7 @@ module.exports = (nbr = 1) => {
   let res = "";
   for (let i = 0; i < nbr; i++) {
     let idx = Math.floor((Math.random() * _WORDS.length));
-    console.log(`word index:${idx} value:${_WORDS[idx]}`);
     res += " " + _WORDS[idx];
   }
-  return res;
+  return res.trim();
 };
