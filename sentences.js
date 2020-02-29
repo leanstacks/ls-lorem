@@ -21,20 +21,18 @@ const _capitalize = (sentence = '') => {
   return sentence.slice(0,1).toUpperCase() + sentence.slice(1);
 };
 
-const _buildSentence = () => {
+const _createSentence = () => {
   const nbrWords = _wordsInSentence();
-  console.log(`words in sentence: ${nbrWords}`);
   let sentence = words(nbrWords);
   sentence += _PERIOD;
   sentence = _capitalize(sentence);
-  console.log(`sentence: ${sentence}`);
   return sentence;
 };
 
 module.exports = (nbr = 1) => {
   let res = "";
   for (let i = 0; i < nbr; i++) {
-    res += " " + _buildSentence();
+    res += " " + _createSentence();
   }
   return res.trim();
 };
