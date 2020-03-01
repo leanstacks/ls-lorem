@@ -4,13 +4,13 @@ ls-lorem is a JavaScript library for placeholder text generation.
 
 ## Installation
 
-Using npm:
+With Node.js:
 
 ```
-$ npm i --save ls-lorem
+$ npm install ls-lorem
 ```
 
-Using yarn:
+With Yarn:
 
 ```
 $ yarn add ls-lorem
@@ -20,35 +20,33 @@ $ yarn add ls-lorem
 
 In Node.js:
 
+```
+const lorem = require('ls-lorem');
+```
+
 ### Words
 
 Create a string of words. The maximum number of words is 1000.
 
 ```
-// Load the 'words' generator.
-const { words } = require('ls-lorem');
-
 // Generate one word.
-const w1 = words();
+const w1 = lorem.words();
 // "lorem"
 
 // Generate specified number of words.
-const w2 = words(6);
+const w2 = lorem.words(6);
 // "elit aliqua ipsum irure urna voluptate"
 ```
 
 Create an array of words. The maximum number of words is 1000.
 
 ```
-// Load the 'wordsAsArray' generator.
-const { wordsAsArray } = require('ls-lorem');
-
 // Generate one word.
-const w1 = wordsAsArray();
+const w1 = lorem.wordsAsArray();
 // ["lorem"]
 
 // Generate specified number of words.
-const w2 = wordsAsArray(6);
+const w2 = lorem.wordsAsArray(6);
 // ["elit","aliqua","ipsum","irure","urna","voluptate"]
 ```
 
@@ -57,30 +55,24 @@ const w2 = wordsAsArray(6);
 Create a string of sentences. The maximum number of sentences is 100.
 
 ```
-// Load the 'sentences' generator.
-const { sentences } = require('ls-lorem');
-
 // Generate one sentence.
-const s1 = sentences();
+const s1 = lorem.sentences();
 // "Neque in ad do deserunt nunc."
 
 // Generate specified number of sentences.
-const s2 = sentences(2);
+const s2 = lorem.sentences(2);
 // "Ligula enim nibh cras vel. Arcu quam sed qui in labore nulla convallis."
 ```
 
 Create an array of sentences. The maximum number of sentences is 100.
 
 ```
-// Load the 'sentencesAsArray' generator.
-const { sentencesAsArray } = require('ls-lorem');
-
 // Generate one sentence.
-const s1 = sentencesAsArray();
+const s1 = lorem.sentencesAsArray();
 // ["Neque in ad do deserunt nunc."]
 
 // Generate specified number of sentences.
-const s2 = sentencesAsArray(2);
+const s2 = lorem.sentencesAsArray(2);
 // ["Ligula enim nibh cras vel.","Arcu quam sed qui in labore nulla convallis."]
 ```
 
@@ -89,15 +81,12 @@ const s2 = sentencesAsArray(2);
 Create a single paragraph as a string or multiple paragraphs as an array. The maximum number of paragraphs in the array is 50.
 
 ```
-// Load the generator.
-const { paragraph, paragraphs } = require('ls-lorem');
-
 // Generate one paragraph. Returns a string.
-const p1 = paragraph();
+const p1 = lorem.paragraph();
 // "Voluptate dolore mollit urna nostrud nulla. Commodo irure aliqua ea anim facilisis. Sint excepteur a irure ullamco sed. Sit neque qos sapien veniam mollit sed. Ad nam officia id magna consequat id tempus."
 
 // Generate specified number of paragraphs. Returns an array of strings.
-const p2 = paragraphs(2);
+const p2 = lorem.paragraphs(2);
 // ["Cupidatat tempus fermentum ullamco sed laoreet mi. Ex neque a dapibus morbi adipiscing. Consequat ipsum ut nibh anim egestas arcu. Dapibus cillum magna tempor commodo. Elit elit consectetur dolore ea bibendum elit. Officia nunc est enim sapien ero. Massa ligula nulla lorem aliqua laboris irure reprehenderit.","Sit duis consectetur magna qos eiusmod voluptate. Fugait posuere sint ornare ipsum voluptate ero. Anim in aliquip consectetur qui aenean commodo. Urna pariatur laboris nulla tempus mollit. Proin cras nisi vitae consequat cillum ea."]
 
 ```
