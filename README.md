@@ -7,13 +7,13 @@ ls-lorem is a JavaScript library for placeholder text generation.
 With Node.js:
 
 ```
-$ npm install ls-lorem
+npm install ls-lorem
 ```
 
 With Yarn:
 
 ```
-$ yarn add ls-lorem
+yarn add ls-lorem
 ```
 
 ## Usage
